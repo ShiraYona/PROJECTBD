@@ -1,0 +1,26 @@
+
+<div class="row" style="gap: 20px;">
+    <div class="col col-3"></div>
+    <button *ngIf="flag" class="col" (click)="reset()" class="btn btn-outline-light">Level 1 game</button>
+        <button *ngIf="flag" class="col" (click)="reset1()" class="btn btn-outline-light">Level 2 game</button>
+    
+</div><br>
+<div class="row">
+    <div class="col-1"></div>
+    <table class="col">
+        <thead>
+            <th id="th">
+                <h1 *ngIf="!flag" id="titel">My-guess</h1>
+            </th>
+            <th id="th">
+                <h1 *ngIf="!flag"  id="titel">Score</h1>
+            </th>
+            <br>
+        </thead>
+    </table>
+    <div class="col-1.5"></div>
+</div>
+
+<br>
+<app-drawing   *ngFor="let item of listNumber; let i = index" [index]="i" [listRandom]="listRandom"
+    [(listPush)]="listNumber"></app-drawing>

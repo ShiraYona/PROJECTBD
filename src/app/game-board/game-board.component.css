@@ -1,0 +1,14 @@
+button{
+
+   width: 180px;
+    font-family: cursive;
+
+} 
+#titel{
+    animation: example 7s infinite;
+    font-size: 55px; 
+    font-family:cursive;
+     color: rgb(233, 233, 233);
+     text-align: center;
+     
+}

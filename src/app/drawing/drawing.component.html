@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-2"></div>
+    <table class="col">
+        <tbody>
+            <tr>
+                <td >
+                    <select  [(ngModel)]="listC[0]" [ngStyle]="{'background-color':listC[0]}" id="button">
+                        <option *ngFor="let t of listColor" [ngStyle]="{'background-color':t}">{{t}}</option>
+                    </select>
+                    <select [(ngModel)]="listC[1]" [ngStyle]="{'background-color':listC[1]}" id="button">
+                        <option *ngFor="let t of listColor" [ngStyle]="{'background-color':t}">{{t}}</option>
+                    </select>
+                    <select [(ngModel)]="listC[2]" [ngStyle]="{'background-color':listC[2]}" id="button">
+                        <option *ngFor="let t of listColor" [ngStyle]="{'background-color':t}">{{t}}</option>
+                    </select>
+                    <select [(ngModel)]="listC[3]" [ngStyle]="{'background-color':listC[3]}" id="button">
+                        <option *ngFor="let t of listColor" [ngStyle]="{'background-color':t}">{{t}}</option>
+                    </select>
+                </td>
+                <td>
+                    <app-check-bp *ngIf="flag" [chooseColor]="listC" [listColor]="listRandom"></app-check-bp>
+                </td>
+                <td>
+                    <button *ngIf="flag3" (click)="check()" type="button" class="btn btn-outline-dark">check</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="col-2"></div>
+
+</div><br>
+
+<h1 style="font-size: 50px; font-family: cursive; color: rgb(194, 29, 29);" *ngIf="flag1">Sorry:) , the number of guesses is over, try again</h1>
+<h1 id="win" *ngIf="flag2">You won!!! Well done! see you again :)</h1>
